@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "cmath": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "geometry": "cpp",
+        "core": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp"
     }
 }

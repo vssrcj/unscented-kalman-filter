@@ -67,6 +67,11 @@ public:
   ///* Sigma point spreading parameter
   double lambda_;
 
+  ///* Number of sigma points
+  int n_sigma;
+
+  ///* NIS of system calculated after each measurement
+  float nis_;
 
   /**
    * Constructor
@@ -102,6 +107,19 @@ public:
    * @param meas_package The measurement at k+1
    */
   void UpdateRadar(MeasurementPackage meas_package);
+
+  /**
+  * ProcessMeasurement
+  * @param delta_t Compute sigma points
+  */
+  MatrixXd ComputeSigmaPoints(double delta_t);
+
+
+  /**
+  * Helper function to normalize angles in range [-PI, PI]
+  * @param phi angle to be normalized
+  */
+  void NormalizeAngle(double& phi);
 };
 
 #endif /* UKF_H */
