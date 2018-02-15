@@ -68,7 +68,7 @@ public:
   double lambda_;
 
   ///* Number of sigma points
-  int n_sigma;
+  int n_sigma_;
 
   ///* NIS of system calculated after each measurement
   float nis_;
